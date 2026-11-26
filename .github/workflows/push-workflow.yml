@@ -1,0 +1,29 @@
+name: Push Trigger Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  push-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Display Welcome Message
+        run: echo "Code Successfully Pushed to GitHub"
+
+      - name: Display Current Directory
+        run: pwd
+
+      - name: Display Files
+        run: ls -la
+
+      - name: Display Current Date
+        run: date
+
+      - name: Completion Message
+        run: echo "Push Workflow Completed Successfully"
