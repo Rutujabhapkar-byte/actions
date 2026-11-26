@@ -1,0 +1,30 @@
+name: Cron Job Every 5 Minutes
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  cron-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Display Welcome Message
+        run: echo "Cron Job Started Successfully"
+
+      - name: Display Current Date
+        run: date
+
+      - name: Display Current Directory
+        run: pwd
+
+      - name: List Files
+        run: ls -la
+
+      - name: Completion Message
+        run: echo "Cron Job Completed Successfully"
+
