@@ -1,0 +1,25 @@
+name: Basic Commands
+
+on: [push]
+
+jobs:
+  demo-commands:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show Current Directory
+        run: pwd
+
+      - name: List Files
+        run: ls -la
+
+      - name: Display Date
+        run: date
+
+      - name: Create Text File
+        run: |
+          echo "This is my demo file" > demo.txt
+          cat demo.txt
+
+      - name: Run Python Program
+        run: python3 hello.py
