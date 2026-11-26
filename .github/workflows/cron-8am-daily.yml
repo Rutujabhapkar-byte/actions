@@ -1,0 +1,30 @@
+name: Daily 8 AM Cron Job
+
+on:
+  schedule:
+    - cron: '30 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  daily-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Display Welcome Message
+        run: echo "Good Morning! Daily Cron Job Started"
+
+      - name: Display Current Date
+        run: date
+
+      - name: Display Current Directory
+        run: pwd
+
+      - name: List Files
+        run: ls -la
+
+      - name: Completion Message
+        run: echo "Daily Cron Job Completed Successfully"
+
