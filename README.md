@@ -9,50 +9,35 @@ ACER@Rutuja MINGW64 ~/actions
 $ nano hello.py
 
 ACER@Rutuja MINGW64 ~/actions
-$ cat hello.py
-print ("hello world!")
+$ cat hello.py 
+
+output:-print ("hello world!")
 print("welcome to github actions")
 
 
 ACER@Rutuja MINGW64 ~/actions
 $ mkdir -p .github/workflows
 
-ACER@Rutuja MINGW64 ~/actions
-$ nano .github/workflow/basic-commands.yml
 
 ACER@Rutuja MINGW64 ~/actions
 $ nano .github/workflows/basic-commands.yml
 
 ACER@Rutuja MINGW64 ~/actions
 $ ls -R
-.:
+.: output:-
 hello.py
 
 ACER@Rutuja MINGW64 ~/actions
-$ git init
+$ git init 
+output:-
 Initialized empty Git repository in C:/Users/ACER/actions/.git/
 
 ACER@Rutuja MINGW64 ~/actions (main)
 $ git add .
-warning: in the working copy of '.github/workflows/basic-commands.yml', LF will be replaced by CRLF the next time Gi
-t touches it
-warning: in the working copy of 'hello.py', LF will be rep
-laced by CRLF the next time Git touches it
 
 ACER@Rutuja MINGW64 ~/actions (main)
 $ git commit -m "first actions"
-[main (root-commit) 2e84d4c] first actions
- 2 files changed, 28 insertions(+)
- create mode 100644 .github/workflows/basic-commands.yml
- create mode 100644 hello.py
 
-ACER@Rutuja MINGW64 ~/actions (main)
-$ ^C
-
-ACER@Rutuja MINGW64 ~/actions (main)
-$ git commit -m "first actions"
-On branch main
-nothing to commit, working tree clean
 
 ACER@Rutuja MINGW64 ~/actions (main)
 $ git branch -M main
@@ -60,16 +45,6 @@ $ git branch -M main
 ACER@Rutuja MINGW64 ~/actions (main)
 $ git remote add origin https://github.com/Rutujabhapkar-byte/actions.git
 
-ACER@Rutuja MINGW64 ~/actions (main)
-$ git push -u origin main
-To https://github.com/Rutujabhapkar-byte/actions.git
- ! [rejected]        main -> main (fetch first)
-error: failed to push some refs to 'https://github.com/Rutujabhapkar-byte/actions.git'
-hint: Updates were rejected because the remote contains work that you do not
-hint: have locally. This is usually caused by another repository pushing to
-hint: the same ref. If you want to integrate the remote changes, use
-hint: 'git pull' before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 ACER@Rutuja MINGW64 ~/actions (main)
 $ git push -u origin main
@@ -84,6 +59,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 ACER@Rutuja MINGW64 ~/actions (main)
 $ git pull origin main --allow-unrelated-histories --no-edit
+
 remote: Enumerating objects: 3, done.
 remote: Counting objects: 100% (3/3), done.
 remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
@@ -107,6 +83,3 @@ Total 8 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 To https://github.com/Rutujabhapkar-byte/actions.git
    c425ced..9e4f476  main -> main
 branch 'main' set up to track 'origin/main'.
-
-ACER@Rutuja MINGW64 ~/actions (main)
-$
